@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegate</title>
+</head>
+<body>
+    <h1>explore event deligate</h1>
+    <ul id="listUl">
+        <li class="list">item-1</li>
+        <li class="list">item-2</li>
+        <li class="list">item-3</li>
+        <li class="list">item-4</li>
+        <li class="list">item-5</li>
+        <li class="list">item-6</li>
+    </ul>
+    <button id="btn1">Add new item</button>
+    <script>
+        document.getElementById('btn1').addEventListener('click', function(){
+            const li = document.createElement("li")
+            const ulI = document.getElementById('listUl');
+            li.innerText = 'lorem2';
+            // li.setAttribute('class','list') 
+            li.classList.add('list')
+            ulI.appendChild(li);
+            
+        })
+
+        document.getElementById('listUl').addEventListener('click',function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+
+        // const items = document.getElementsByClassName('list');
+        // for (const item of items) {
+        //     item.addEventListener('click',function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+    </script>
+</body>
+</html>
