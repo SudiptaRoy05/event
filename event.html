@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event in DOM</title>
+</head>
+
+<body>
+    <h1>Final dom event handler</h1>
+    <h3 id="status">hello world!</h3>
+
+    <p id="ipd">input text</p>
+    <input id="inputf" type="text">
+    <button id="btnupdt">Update</button>
+    <br><br>
+    <button onclick="handleOnClick()">Add onclick function</button>
+    <button id="listen">evente listener</button>
+
+    <script>
+        document.getElementById('btnupdt').addEventListener('click', function(){
+            const inp = document.getElementById('inputf')
+            
+            const inpTxt = inp.value
+            const p = document.getElementById('ipd')
+            p.innerText = inpTxt;
+            inp.value ='';
+        })
+    </script>
+</body>
+
+</html>

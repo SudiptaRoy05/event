@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment using event listener</title>
+</head>
+<body>
+    <br>
+    <br>
+    <div id="paste"></div>
+    <br><br>
+    <input id="commentInput" type="text"><br>
+    <br>
+    <button id="commentBtn">Comment</button>
+    <script>
+        document.getElementById('commentBtn').addEventListener('click', function(){
+            const input = document.getElementById('commentInput');
+            const vaal = input.value
+            const div = document.getElementById('paste')
+            div.innerText = vaal;
+            input.value = "";
+        })
+    </script>
+</body>
+</html>
