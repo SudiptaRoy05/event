@@ -8,17 +8,23 @@
 <body>
     <br>
     <br>
-    <div id="paste"></div>
+    <div id="paste">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus provident sit eaque, veritatis cumque temporibus! Dolorem dolorum ipsum est deserunt iste aperiam ex, saepe reprehenderit voluptate esse praesentium, mollitia quo.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, dolores laborum velit officia optio deleniti suscipit porro labore eum error voluptatem harum architecto sint aperiam iste? Dolor minus quaerat eaque maiores repudiandae laboriosam ducimus aut, debitis architecto provident ipsum eligendi.</p>
+    </div>
     <br><br>
-    <input id="commentInput" type="text"><br>
+    <textarea name="" id="commentInput" cols="50" rows="5"></textarea>
+    <br>
     <br>
     <button id="commentBtn">Comment</button>
     <script>
         document.getElementById('commentBtn').addEventListener('click', function(){
             const input = document.getElementById('commentInput');
             const vaal = input.value
-            const div = document.getElementById('paste')
-            div.innerText = vaal;
+            const div = document.getElementById('paste');
+
+            const p = document.createElement('p');
+            div.appendChild(p).innerText = vaal
             input.value = "";
         })
     </script>
